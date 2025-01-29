@@ -1,0 +1,7 @@
+circle {
+  transition: all 0.7s ease-in-out;
+}
+button {
+  margin: 1rem;
+  padding: 0.5rem;
+}

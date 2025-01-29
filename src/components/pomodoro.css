@@ -1,0 +1,8 @@
+.next-arrow {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.point-left {
+  rotate: 180deg;
+}
