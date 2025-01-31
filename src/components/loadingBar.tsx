@@ -19,7 +19,7 @@ const Circle = (props: { percentage: number; color: string; }) => {
       cy={100}
       fill='transparent'
       stroke={strokePct !== circ ? color : ''}
-      strokeWidth={'2rem'}
+      strokeWidth={'1rem'}
       strokeDasharray={circ}
       strokeDashoffset={percentage ? strokePct : 0}
     ></circle>

@@ -2,6 +2,10 @@
   color: #ffffffde;
   background-color: #242424;
 }
+button {
+  background-color: #333232;
+  color:#ffffffde
+}
 
 #root {
   max-width: 1280px;

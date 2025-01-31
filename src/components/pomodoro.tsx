@@ -50,27 +50,29 @@ function Pomodoro() {
       <h2>{isBreakTime ? 'Break' : 'Pomodoro'}</h2>
       <LoadingBar progress={timer} total={totalTime}
         isBreak={isBreakTime} />
-      <br />
-      <button onClick={() => {
-        if (sessionCount >= totalSessionCount) {
-          setSessionCount(DEFAULT_SESSION);
-        }
-        setIsTimerRunning(tr => !tr)
-      }}>
-        {isTimerRunning ? 'pause' : 'start'}
-      </button>
-      <br />
-      <button onClick={() =>
-        totalSessionCount > 1 &&
-        setTotalSessionCount(sc => sc - 1)
-      }>
-        <img className="next-arrow point-left" src={nextArrow} />
-      </button>
-      <span>session {sessionCount} out of {totalSessionCount}</span>
-      <button onClick={() => setTotalSessionCount(sc => sc + 1)}>
-        <img className="next-arrow" src={nextArrow} />
-      </button>
+      <div>
+        <button onClick={() => {
+          if (sessionCount >= totalSessionCount) {
+            setSessionCount(DEFAULT_SESSION);
+          }
+          setIsTimerRunning(tr => !tr)
+        }}>
+          {isTimerRunning ? 'pause' : 'start'}
+        </button>
+      </div>
+      <div>
+        <button onClick={() =>
+          totalSessionCount > 1 &&
+          setTotalSessionCount(sc => sc - 1)
+        }>
+          <img className="next-arrow point-left" src={nextArrow} />
+        </button>
 
+        <span>session {sessionCount} out of {totalSessionCount}</span>
+        <button onClick={() => setTotalSessionCount(sc => sc + 1)}>
+          <img className="next-arrow" src={nextArrow} />
+        </button>
+      </div>
     </div>
   )
 }
