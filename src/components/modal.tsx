@@ -13,14 +13,14 @@ const Modal = (props: ModalProps) => {
     isOpen && (
       <div className='modal-overlay'>
         <div className='modal-box'>
-          <div>
+          <div className='close-div'>
             <button className='close-modal-btn' onClick={closeModal}>
               <img src={closeButton} alt='close icon' />
             </button>
           </div>
           {children}
-        </div >
-      </div >
+        </div>
+      </div>
     ))
 }
 

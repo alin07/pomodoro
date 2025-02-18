@@ -14,6 +14,9 @@ function App() {
   return (
     <div>
       <Pomodoro />
+
+      <h2>Tasks</h2>
+      <TaskList tasks={tasks} setTasks={setTasks} />
       <button onClick={() => setModalOpen(true)}>
         Add a Task
       </button>
@@ -23,9 +26,6 @@ function App() {
         tasks={tasks}
         setTasks={setTasks}
       />
-
-      <TaskList tasks={tasks} setTasks={setTasks} />
-
     </div >
   )
 }

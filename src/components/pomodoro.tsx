@@ -8,7 +8,7 @@ import nextArrow from '../assets/next.svg'
 import './Pomodoro.css'
 
 function Pomodoro() {
-  const STUDY_TIME = 100, BREAK_TIME = 300, LONG_BREAK_TIME = 1500, DEFAULT_SESSION = 1;
+  const STUDY_TIME = 1500, BREAK_TIME = 300, LONG_BREAK_TIME = 900, DEFAULT_SESSION = 1;
 
   const [timer, setTimer] = useState<number>(STUDY_TIME)
   const [isTimerRunning, setIsTimerRunning] = useState<boolean>(false)

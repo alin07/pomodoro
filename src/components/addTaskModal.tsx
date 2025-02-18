@@ -31,7 +31,9 @@ const AddTaskModal = (props: AddTaskModalProps) => {
 
   return (
     <Modal isOpen={isModalOpen} closeModal={closeModal}>
-      <label htmlFor='task-name'>Task Name</label>
+      <div>
+        <label htmlFor='task-name'>Task Name</label>
+      </div>
       <input
         name='task-name'
         type='text'
@@ -46,7 +48,7 @@ const AddTaskModal = (props: AddTaskModalProps) => {
         value={task?.name}
       />
       <button onClick={addTask}>
-        Submit
+        add
       </button>
     </Modal>
   )
