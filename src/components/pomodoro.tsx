@@ -5,7 +5,7 @@ import dingSound from '../assets/ding.mp3'
 import LoadingBar from './loadingBar'
 import nextArrow from '../assets/next.svg'
 
-import './Pomodoro.css'
+import './pomodoro.css'
 
 function Pomodoro() {
   const STUDY_TIME = 1500, BREAK_TIME = 300, LONG_BREAK_TIME = 900, DEFAULT_SESSION = 1;
