@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import { useInterval } from '../hooks/useInterval'
+import { useInterval } from '../../hooks/useInterval'
 
-import dingSound from '../assets/ding.mp3'
-import LoadingBar from './loadingBar'
-import nextArrow from '../assets/next.svg'
+import LoadingBar from '../loadingBar/loadingBar'
+import dingSound from '../../assets/ding.mp3'
+import nextArrow from '../../assets/next.svg'
 
 import './pomodoro.css'
 
@@ -27,13 +27,18 @@ function Pomodoro() {
         dingAudio.play()
         if (sessionCount === totalSessionCount && isBreakTime) {
           setIsTimerRunning(false)
+        } else if (sessionCount !== totalSessionCount && isBreakTime) {
           setSessionCount(sc => sc + 1)
         }
 
         setIsBreakTime(bt => !bt)
         const currentTotalTime = isBreakTime
-          ? sessionCount % 4 === 0 ? LONG_BREAK_TIME : BREAK_TIME
-          : STUDY_TIME
+          ? STUDY_TIME
+          : sessionCount % 4 === 0
+            ? LONG_BREAK_TIME
+            : BREAK_TIME
+
+
         setTimer(currentTotalTime)
         setTotalTime(currentTotalTime)
 

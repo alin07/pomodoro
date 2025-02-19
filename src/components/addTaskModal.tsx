@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction, useState } from 'react'
-import Modal from '../components/modal'
+import Modal from './modal/modal'
 import { Task } from '../interfaces/tasks'
 
 type AddTaskModalProps = {

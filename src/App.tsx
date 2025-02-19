@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { Task } from './interfaces/tasks'
 
-import Pomodoro from './components/pomodoro'
-import TaskList from './components/taskList'
+import Pomodoro from './components/pomodoro/pomodoro'
+import TaskList from './components/taskList/taskList'
 // import Draggable from './components/draggable'
 import './App.css'
 import AddTaskModal from './components/addTaskModal'

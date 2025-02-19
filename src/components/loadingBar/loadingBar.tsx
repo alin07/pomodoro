@@ -1,4 +1,4 @@
-import { formatSecondsToTime } from '../utils/time'
+import { formatSecondsToTime } from '../../utils/time'
 
 import './loadingBar.css'
 const cleanPercentage = (percentage: number) => {
@@ -32,7 +32,7 @@ const Text = (props: { text: string; }) => {
     <text
       x='50%'
       y='50%'
-      fill='#ffffffde'
+      fill='#333232'
       dominantBaseline='central'
       textAnchor='middle'
       fontSize={'1.5em'}
